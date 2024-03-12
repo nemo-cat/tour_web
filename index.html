@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klook</title>
+    <link rel="stylesheet" href="style/default.css">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="wrap">
+            <div class="header-top">
+                <div class="header-top-left">
+                    <h1><a href="index.html"><span class="hide">Klook</span></a></h1>
+                    <div class="header-search">
+                        <input type="text" placeholder="어디로 떠날까요?">
+                        <button><div class="hide">검색하기</div></button>
+                    </div>
+                </div>
+                <div class="header-top-right">
+                    <ul class="header-util">
+                        <li><a href="#none">앱에서 보기</a></li>
+                        <li><a href="#none">FAQ</a></li>
+                        <li><a href="#none">최근 본 액티비티</a></li>
+                        <li><a href="#none">회원가입</a></li>
+                        <li><a href="#none">로그인</a></li>
+                    </ul>
+                    <div class="toggle-menu">
+                        <div class="hide">메뉴</div>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <div class="header-bottom-left">
+                    <div class="header-search moblie">
+                        <input type="text" placeholder="어디로 떠날까요?">
+                        <button><div class="hide">검색하기</div></button>
+                    </div>
+                    <ul class="gnb-menu">
+                        <li><a href="#none">여행지 둘러보기</a></li>
+                        <li><a href="#none">모든 카테고리</a></li>
+                        <li><a href="#none">투어 & 액티비티</a></li>
+                        <li><a href="#none">티켓 & 입장권</a></li>
+                        <li><a href="#none">호텔</a></li>
+                        <li><a href="#none">교통</a></li>
+                        <li><a href="#none">렌터카</a></li>
+                        <li><a href="#none">유심 & 와이파이</a></li>
+                        <li><a href="#none">보험</a></li>
+                    </ul>
+                    <ul class="gnb-menu tablet">
+                        <li><a href="#none">여행지<br>둘러보기</a></li>
+                        <li><a href="#none">모든<br>카테고리</a></li>
+                        <li><a href="#none">투어 &<br>액티비티</a></li>
+                        <li><a href="#none">티켓 &<br>입장권</a></li>
+                        <li><a href="#none">호텔</a></li>
+                        <li><a href="#none">교통</a></li>
+                        <li><a href="#none">렌터카</a></li>
+                        <li><a href="#none">유심 &<br>와이파이</a></li>
+                        <li><a href="#none">보험</a></li>
+                    </ul>
+                    <ul class="header-util tablet">
+                        <li><a href="#none">앱에서 보기</a></li>
+                        <li><a href="#none">FAQ</a></li>
+                        <li><a href="#none">최근 본 액티비티</a></li>
+                        <li><a href="#none">회원가입</a></li>
+                        <li><a href="#none">로그인</a></li>
+                    </ul>
+                </div>
+                <div class="header-bottom-right">
+                    <ul class="event">
+                        <li><a href="#none">혜택 모음</a></li>
+                        <li><a href="#none">한국어 투어</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="mainSlider">
+        <div class="slider-wrap">
+            <ul class="slider-inner">
+                <li>
+                    <a href="#none">
+                        <img src="images/mainSlide-01.png" alt="">
+                        <div class="slider-text">
+                            <div class="slider-text-inner">
+                                <span class="country">
+                                    일본
+                                </span>
+                                <p>벚꽃 아래로,<br>
+                                    봄의 감동을 느껴보세요!
+                                </p>
+                                <span class="sub-text">조기 예약시 최대 6만원 할인</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <img src="images/mainSlide-02.png" alt="">
+                        <div class="slider-text">
+                            <div class="slider-text-inner">
+                                <span class="country">
+                                    네덜란드
+                                </span>
+                                <p>튤립의 환상,<br>봄의 향연을 만끽하세요!</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <img src="images/mainSlide-03.png" alt="">
+                        <div class="slider-text">
+                            <div class="slider-text-inner">
+                                <span class="country">
+                                    이탈리아
+                                </span>
+                                <p>아름다운 봄날의 풍경과 예술의<br>여정을 떠나보세요!</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="slider-btn">
+                <li class="active"><span></span><img src="images/mainSlide-btn-01.png" alt="첫번째 슬라이드"></li>
+                <li><span></span><img src="images/mainSlide-btn-02.png" alt="두번째 슬라이드"></li>
+                <li><span></span><img src="images/mainSlide-btn-03.png" alt="세번째 슬라이드"></li>
+            </ul>
+        </div>
+    </section>
+    <section id="search">
+        <div class="wrap">
+            <div class="arrive">
+                <span>도착도시</span>
+                <input type="text" placeholder="어디로 떠나고 싶으신가요?">
+            </div>
+            <div class="date">
+                <span>출발일</span>
+                <input type="text" placeholder="출발일">
+            </div>
+            <button class="search-btn">검색</button>
+        </div>
+    </section>
+    <section id="plan">
+        <div class="wrap">
+            <div class="section-tit">
+                <h2>클룩 여행플랜</h2>
+                <p>지금 뜨고있는 해외 여행지</p>
+            </div>
+            <ul class="tab-menu">
+                <li class="active">오사카</li>
+                <li>도쿄</li>
+                <li>홍콩/마카오</li>
+            </ul>
+            <div class="content-area">
+                <div class="card-box card-4box active">
+                    <div class="card-item">
+                        <a href="#none">
+                            <div class="card-item-top">
+                                <img src="images/klookPlan-card01-01.png" alt="">
+                            </div>
+                            <div class="card-item-bottom">
+                                <div class="card-title">
+                                    오사카 여행과 유니버셜 입장권을 한번에
+                                </div>
+                                <div class="card-sub">
+                                    오사카 필수x100 어트랙션! 친구들과, 가족들과 함께 유니버설 스튜디오 세계로, 최고의 재미와 감동을 느끼러 떠나보세요.
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-item">
+                        <a href="#none">
+                            <div class="card-item-top">
+                                <img src="images/klookPlan-card01-02.png" alt="">
+                            </div>
+                            <div class="card-item-bottom">
+                                <div class="card-title">
+                                    도심속 푸른 오아시스, 오사카 성
+                                </div>
+                                <div class="card-sub">
+                                    오사카 성 주변의 넓은 공원을 산책하며 오사카 성을 즐겨보세요! 각 계절마다 특색있는 풍경을 즐겨보세요.
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-item">
+                        <a href="#none">
+                            <div class="card-item-top">
+                                <img src="images/klookPlan-card01-03.png" alt="">
+                            </div>
+                            <div class="card-item-bottom">
+                                <div class="card-title">
+                                    오사카의 신사와 함께하는 특별한 순간
+                                </div>
+                                <div class="card-sub">
+                                    오사카의 신사가 선사하는 아름다움과 역사를 함께하며 특별한 순간을 만나보세요.
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-item">
+                        <a href="#none">
+                            <div class="card-item-top">
+                                <img src="images/klookPlan-card01-03.png" alt="">
+                            </div>
+                            <div class="card-item-bottom">
+                                <div class="card-title">
+                                    오사카의 신사와 함께하는 특별한 순간
+                                </div>
+                                <div class="card-sub">
+                                    오사카의 신사가 선사하는 아름다움과 역사를 함께하며 특별한 순간을 만나보세요.
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="card-box card-4box">
+                    <div class="card-item">
+                        <a href="#none">
+                            <div class="card-item-top">
+                                <img src="images/klookPlan-card02-01.png" alt="">
+                            </div>
+                            <div class="card-item-bottom">
+                                <div class="card-title">
+                                    도쿄의 도심 매력을 느껴보세요
+                                </div>
+                                <div class="card-sub">
+                                    도쿄의 현대적인 도심에서는 활기찬 거리와 풍부한 문화가 어우러져 있습니다. 지금 이 순간, 그 아름다움을 경험해보세요.
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-item">
+                        <a href="#none">
+                            <div class="card-item-top">
+                                <img src="images/klookPlan-card02-02.png" alt="">
+                            </div>
+                            <div class="card-item-bottom">
+                                <div class="card-title">
+                                    도쿄 벚꽃명소에서 인생샷 찍자!
+                                </div>
+                                <div class="card-sub">
+                                    도쿄의 벚꽃 명소는 마치 동화 속 풍경과 같습니다. 특별한 순간을 담아낼 시간입니다.
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-item">
+                        <a href="#none">
+                            <div class="card-item-top">
+                                <img src="images/klookPlan-card02-03.png" alt="">
+                            </div>
+                            <div class="card-item-bottom">
+                                <div class="card-title">
+                                    야경이 아름다운 도시, 도쿄
+                                </div>
+                                <div class="card-sub">
+                                    도쿄의 빛나는 야경은 마치 환상적인 꿈 속에 들어온 듯한 기분을 줍니다. 이 아름다움을 느껴보세요.
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-item">
+                        <a href="#none">
+                            <div class="card-item-top">
+                                <img src="images/klookPlan-card02-03.png" alt="">
+                            </div>
+                            <div class="card-item-bottom">
+                                <div class="card-title">
+                                    야경이 아름다운 도시, 도쿄
+                                </div>
+                                <div class="card-sub">
+                                    도쿄의 빛나는 야경은 마치 환상적인 꿈 속에 들어온 듯한 기분을 줍니다. 이 아름다움을 느껴보세요.
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="card-box card-4box">
+                    <div class="card-item">
+                        <a href="#none">
+                            <div class="card-item-top">
+                                <img src="images/klookPlan-card03-01.png" alt="">
+                            </div>
+                            <div class="card-item-bottom">
+                                <div class="card-title">
+                                    도시의 매력을 느낄 수 있는곳, 마카오
+                                </div>
+                                <div class="card-sub">
+                                    홍콩은 현대와 전통이 공존하는 도시로, 번화가와 역동적인 문화가 특징입니다. 이 도시에서 다채로운 경험을 만나보세요.
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-item">
+                        <a href="#none">
+                            <div class="card-item-top">
+                                <img src="images/klookPlan-card03-02.png" alt="">
+                            </div>
+                            <div class="card-item-bottom">
+                                <div class="card-title">
+                                    흥미진진한 놀이의 세계, 마카오의 카지노
+                                </div>
+                                <div class="card-sub">
+                                    도심의 불빛이 춤추는 곳에서 다채로운 게임과 스릴을 만끽해보세요. 황홀한 순간이 여러분을 기다리고 있습니다.
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-item">
+                        <a href="#none">
+                            <div class="card-item-top">
+                                <img src="images/klookPlan-card03-03.png" alt="">
+                            </div>
+                            <div class="card-item-bottom">
+                                <div class="card-title">
+                                    홍콩의 아름다운 야경을 느껴보세요!
+                                </div>
+                                <div class="card-sub">
+                                    홍콩의 야경은 빛나는 도시와 환상적인 바다가 어우러져 아름다운 풍경을 선사합니다. 이 아름다움을 함께 즐겨보세요.
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-item">
+                        <a href="#none">
+                            <div class="card-item-top">
+                                <img src="images/klookPlan-card03-03.png" alt="">
+                            </div>
+                            <div class="card-item-bottom">
+                                <div class="card-title">
+                                    홍콩의 아름다운 야경을 느껴보세요!
+                                </div>
+                                <div class="card-sub">
+                                    홍콩의 야경은 빛나는 도시와 환상적인 바다가 어우러져 아름다운 풍경을 선사합니다. 이 아름다움을 함께 즐겨보세요.
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="promotion">
+        <div class="wrap">
+            <div class="hide">프로모션</div>
+            <div class="content-area pc">
+                <div class="content-inner">
+                    <div class="card-box card-3box">
+                        <div class="card-item">
+                            <a href="#none"><img src="images/promotion-01.png" alt="한손에 들어오는 여행 일정, 클룩이 추천하는 홍콩"></a>
+                        </div>
+                        <div class="card-item">
+                            <a href="#none"><img src="images/promotion-02.png" alt="UPI 프리미엄 카드 고객 대상 $20 즉시할인"></a>
+                        </div>
+                        <div class="card-item">
+                            <a href="#none"><img src="images/promotion-03.png" alt="클룩으로 완벽해진 도쿄여행 아날로그, 도쿄"></a>
+                        </div>
+                    </div>
+                    <div class="card-box card-3box">
+                        <div class="card-item">
+                            <a href="#none"><img src="images/promotion-04.png" alt="더하기만 하면 준비 끝, 발리 신혼여행 A to Z"></a>
+                        </div>
+                        <div class="card-item">
+                            <a href="#none"><img src="images/promotion-05.png" alt="여행 전 필수 확인! 클룩의 다양한 제휴 혜택"></a>
+                        </div>
+                        <div class="card-item">
+                            <a href="#none"><img src="images/promotion-06.png" alt="여행의 시작과 끝을 편안하게! 공항 픽업/샌딩 서비스"></a>
+                        </div>
+                    </div>
+                    <div class="card-box card-3box">
+                        <div class="card-item">
+                            <a href="#none"><img src="images/promotion-01.png" alt="한손에 들어오는 여행 일정, 클룩이 추천하는 홍콩"></a>
+                        </div>
+                        <div class="card-item">
+                            <a href="#none"><img src="images/promotion-02.png" alt="UPI 프리미엄 카드 고객 대상 $20 즉시할인"></a>
+                        </div>
+                        <div class="card-item">
+                            <a href="#none"><img src="images/promotion-03.png" alt="클룩으로 완벽해진 도쿄여행 아날로그, 도쿄"></a>
+                        </div>
+                    </div>
+                    <div class="card-box card-3box">
+                        <div class="card-item">
+                            <a href="#none"><img src="images/promotion-04.png" alt="더하기만 하면 준비 끝, 발리 신혼여행 A to Z"></a>
+                        </div>
+                        <div class="card-item">
+                            <a href="#none"><img src="images/promotion-05.png" alt="여행 전 필수 확인! 클룩의 다양한 제휴 혜택"></a>
+                        </div>
+                        <div class="card-item">
+                            <a href="#none"><img src="images/promotion-06.png" alt="여행의 시작과 끝을 편안하게! 공항 픽업/샌딩 서비스"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-area tablet">
+                <div class="content-inner">
+                    <div class="card-box card-2box">
+                        <div class="card-item">
+                            <a href="#none"><img src="images/promotion-01.png" alt="한손에 들어오는 여행 일정, 클룩이 추천하는 홍콩"></a>
+                        </div>
+                        <div class="card-item">
+                            <a href="#none"><img src="images/promotion-02.png" alt="UPI 프리미엄 카드 고객 대상 $20 즉시할인"></a>
+                        </div>
+                    </div>
+                    <div class="card-box card-2box">
+                        <div class="card-item">
+                            <a href="#none"><img src="images/promotion-03.png" alt="클룩으로 완벽해진 도쿄여행 아날로그, 도쿄"></a>
+                        </div>
+                        <div class="card-item">
+                            <a href="#none"><img src="images/promotion-04.png" alt="더하기만 하면 준비 끝, 발리 신혼여행 A to Z"></a>
+                        </div>
+                    </div>
+                    <div class="card-box card-2box">
+                        <div class="card-item">
+                            <a href="#none"><img src="images/promotion-05.png" alt="여행 전 필수 확인! 클룩의 다양한 제휴 혜택"></a>
+                        </div>
+                        <div class="card-item">
+                            <a href="#none"><img src="images/promotion-06.png" alt="여행의 시작과 끝을 편안하게! 공항 픽업/샌딩 서비스"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-area mobile">
+                <div class="content-inner">
+                    <div class="card-box card-1box">
+                        <div class="card-item">
+                            <a href="#none"><img src="images/promotion-01.png" alt="한손에 들어오는 여행 일정, 클룩이 추천하는 홍콩"></a>
+                        </div>
+                        <div class="card-item">
+                            <a href="#none"><img src="images/promotion-02.png" alt="UPI 프리미엄 카드 고객 대상 $20 즉시할인"></a>
+                        </div>
+                        <div class="card-item">
+                            <a href="#none"><img src="images/promotion-03.png" alt="클룩으로 완벽해진 도쿄여행 아날로그, 도쿄"></a>
+                        </div>
+                        <div class="card-item">
+                            <a href="#none"><img src="images/promotion-04.png" alt="더하기만 하면 준비 끝, 발리 신혼여행 A to Z"></a>
+                        </div>
+                        <div class="card-item">
+                            <a href="#none"><img src="images/promotion-05.png" alt="여행 전 필수 확인! 클룩의 다양한 제휴 혜택"></a>
+                        </div>
+                        <div class="card-item">
+                            <a href="#none"><img src="images/promotion-06.png" alt="여행의 시작과 끝을 편안하게! 공항 픽업/샌딩 서비스"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="promotion-btn">
+                <div class="left"><span class="hide">왼쪽</span></div>
+                <div class="right"><span class="hide">오른쪽</span></div>
+            </div>
+        </div>
+    </section>
+    <section id="ownTrip">
+        <div class="wrap">
+            <div class="section-tit">
+                <h2>나만의 테마 여행</h2>
+                <p>나만의 특별한 테마 여행을 즐겨보세요!</p>
+            </div>
+            <div class="content-area">
+                <div class="content-inner">
+                    <div class="card-box card-4box active">
+                        <div class="card-item">
+                            <a href="#none">
+                                <div class="card-item-top">
+                                    <img src="images/ownTrip-card-01.png" alt="">
+                                </div>
+                                <div class="card-item-bottom">
+                                    <div class="card-title">
+                                        일본 교통패스 & 신칸센 PICK
+                                    </div>
+                                    <div class="card-sub">
+                                        클록 에디터가 강력 추천하는 일본 교통 상품을 지금 확인해보세요.
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-item">
+                            <a href="#none">
+                                <div class="card-item-top">
+                                    <img src="images/ownTrip-card-02.png" alt="">
+                                </div>
+                                <div class="card-item-bottom">
+                                    <div class="card-title">
+                                        유럽 최고의 가성비 상품 PICK
+                                    </div>
+                                    <div class="card-sub">
+                                        클록 에디터가 강력 추천하는 유럽 여행 필수 상품을 지금 확인해보세요.
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-item">
+                            <a href="#none">
+                                <div class="card-item-top">
+                                    <img src="images/ownTrip-card-03.png" alt="">
+                                </div>
+                                <div class="card-item-bottom">
+                                    <div class="card-title">
+                                        미국 여행 렌트카 PICK
+                                    </div>
+                                    <div class="card-sub">
+                                        클록 에디터가 강력 추천하는 미국 여행 렌트카 상품을 지금 확인해보세요.
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-item">
+                            <a href="#none">
+                                <div class="card-item-top">
+                                    <img src="images/ownTrip-card-04.png" alt="">
+                                </div>
+                                <div class="card-item-bottom">
+                                    <div class="card-title">
+                                        캄보디아 배낭여행 PICK
+                                    </div>
+                                    <div class="card-sub">
+                                        클록 에디터가 강력 추천하는 캄보디아 배낭여행 상품을 지금 확인해보세요.
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-box card-4box">
+                        <div class="card-item">
+                            <a href="#none">
+                                <div class="card-item-top">
+                                    <img src="images/ownTrip-card-01.png" alt="">
+                                </div>
+                                <div class="card-item-bottom">
+                                    <div class="card-title">
+                                        일본 교통패스 & 신칸센 PICK
+                                    </div>
+                                    <div class="card-sub">
+                                        클록 에디터가 강력 추천하는 일본 교통 상품을 지금 확인해보세요.
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-item">
+                            <a href="#none">
+                                <div class="card-item-top">
+                                    <img src="images/ownTrip-card-02.png" alt="">
+                                </div>
+                                <div class="card-item-bottom">
+                                    <div class="card-title">
+                                        유럽 최고의 가성비 상품 PICK
+                                    </div>
+                                    <div class="card-sub">
+                                        클록 에디터가 강력 추천하는 유럽 여행 필수 상품을 지금 확인해보세요.
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-item">
+                            <a href="#none">
+                                <div class="card-item-top">
+                                    <img src="images/ownTrip-card-03.png" alt="">
+                                </div>
+                                <div class="card-item-bottom">
+                                    <div class="card-title">
+                                        미국 여행 렌트카 PICK
+                                    </div>
+                                    <div class="card-sub">
+                                        클록 에디터가 강력 추천하는 미국 여행 렌트카 상품을 지금 확인해보세요.
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-item">
+                            <a href="#none">
+                                <div class="card-item-top">
+                                    <img src="images/ownTrip-card-04.png" alt="">
+                                </div>
+                                <div class="card-item-bottom">
+                                    <div class="card-title">
+                                        캄보디아 배낭여행 PICK
+                                    </div>
+                                    <div class="card-sub">
+                                        클록 에디터가 강력 추천하는 캄보디아 배낭여행 상품을 지금 확인해보세요.
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-box card-4box">
+                        <div class="card-item">
+                            <a href="#none">
+                                <div class="card-item-top">
+                                    <img src="images/ownTrip-card-01.png" alt="">
+                                </div>
+                                <div class="card-item-bottom">
+                                    <div class="card-title">
+                                        일본 교통패스 & 신칸센 PICK
+                                    </div>
+                                    <div class="card-sub">
+                                        클록 에디터가 강력 추천하는 일본 교통 상품을 지금 확인해보세요.
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-item">
+                            <a href="#none">
+                                <div class="card-item-top">
+                                    <img src="images/ownTrip-card-02.png" alt="">
+                                </div>
+                                <div class="card-item-bottom">
+                                    <div class="card-title">
+                                        유럽 최고의 가성비 상품 PICK
+                                    </div>
+                                    <div class="card-sub">
+                                        클록 에디터가 강력 추천하는 유럽 여행 필수 상품을 지금 확인해보세요.
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-item">
+                            <a href="#none">
+                                <div class="card-item-top">
+                                    <img src="images/ownTrip-card-03.png" alt="">
+                                </div>
+                                <div class="card-item-bottom">
+                                    <div class="card-title">
+                                        미국 여행 렌트카 PICK
+                                    </div>
+                                    <div class="card-sub">
+                                        클록 에디터가 강력 추천하는 미국 여행 렌트카 상품을 지금 확인해보세요.
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-item">
+                            <a href="#none">
+                                <div class="card-item-top">
+                                    <img src="images/ownTrip-card-04.png" alt="">
+                                </div>
+                                <div class="card-item-bottom">
+                                    <div class="card-title">
+                                        캄보디아 배낭여행 PICK
+                                    </div>
+                                    <div class="card-sub">
+                                        클록 에디터가 강력 추천하는 캄보디아 배낭여행 상품을 지금 확인해보세요.
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-btn">
+                    <button class="view-more">더보기</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="more">
+        <div class="wrap">
+            <div class="section-tit">
+                <h2>여행지 둘러보기</h2>
+                <p>색다른 여행지를 둘러보세요!</p>
+            </div>
+            <div class="content-area">
+                <div class="card-box card-4box">
+                    <div class="card-item">
+                        <a href="#none">
+                            <img src="images/lookAround-card-01.png" alt="">
+                            <div class="img-dimmed">
+                                <p class="dimmed-text">현직 가이드 추천!<br>한번쯤은 꼭 가봐야할 명소</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-item">
+                        <a href="#none">
+                            <img src="images/lookAround-card-02.png" alt="">
+                            <div class="img-dimmed">
+                                <p class="dimmed-text">현직 가이드 추천!<br>한번쯤은 꼭 가봐야할 명소</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-item">
+                        <a href="#none">
+                            <img src="images/lookAround-card-03.png" alt="">
+                            <div class="img-dimmed">
+                                <p class="dimmed-text">현직 가이드 추천!<br>한번쯤은 꼭 가봐야할 명소</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-item">
+                        <a href="#none">
+                            <img src="images/lookAround-card-04.png" alt="">
+                            <div class="img-dimmed">
+                                <p class="dimmed-text">현직 가이드 추천!<br>한번쯤은 꼭 가봐야할 명소</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="aboutKlook">
+        <div class="wrap">
+            <div class="section-tit">
+                <h2>여행의 시작부터 끝까지, 클룩으로 한번에</h2>
+            </div>
+            <div class="content-area">
+                <div class="card-box card-4box">
+                    <div class="card-item">
+                        <div class="card-item-bottom">
+                            <div class="card-title">
+                                클록 블로그
+                            </div>
+                            <div class="card-sub">
+                                나만 알고싶은 여행지, 비밀스런 여행 레시피를 소개합니다.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <div class="card-item-bottom">
+                            <div class="card-title">
+                                포인트 적립하기
+                            </div>
+                            <div class="card-sub">
+                                클룩 액티비티를 즐기고, 후기까지 남기면 다음 액티비티를 할인된 가격에 즐길 수 있습니다.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <div class="card-item-bottom">
+                            <div class="card-title">
+                                친구 초대해서 혜택받기
+                            </div>
+                            <div class="card-sub">
+                                초대받은 친구가 액티비티를 완료하면, ₩5,000 상당의 할인 쿠폰을 받을 수 있어요.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <div class="card-item-bottom">
+                            <div class="card-title">
+                                앱에서 첫 구매시 5%할인
+                            </div>
+                            <div class="card-sub">
+                                클록 앱헤서 첫 구매시 무조건 5% 할인!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-top">
+            <div class="wrap">
+                <div class="footer-top-left">
+                    <div class="footer-item-box">
+                        <h3>회사소개</h3>
+                        <ul>
+                            <li><a href="#none">클록 소개</a></li>
+                            <li><a href="#none">클록 블로그</a></li>
+                            <li><a href="#none">클록 가이드</a></li>
+                            <li><a href="#none">채용정보</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-item-box">
+                        <h3>파트너십</h3>
+                        <ul>
+                            <li><a href="#none">머천트 입점 문의</a></li>
+                            <li><a href="#none">머천트 포털</a></li>
+                            <li><a href="#none">제휴 파트너 프로그램</a></li>
+                            <li><a href="#none">인플루언서 프로그램</a></li>
+                            <li><a href="#none">에이전트 B2B 마켓 플레이스</a></li>
+                            <li><a href="#none">디지털 솔루션</a></li>
+                            <li><a href="#none">마케팅 제휴 문의</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-item-box">
+                        <h3>이용약관</h3>
+                        <ul>
+                            <li><a href="#none">약관</a></li>
+                            <li><a href="#none">개인정보처리방침</a></li>
+                            <li><a href="#none">쿠키 정책</a></li>
+                            <li><a href="#none">버그 바운티 프로그램</a></li>
+                            <li><a href="#none">위치기반서비스 이용약관</a></li>
+                            <li><a href="#none">동물복지 정책</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-top-right">
+                    <div class="footer-item-box">
+                        <h3>결제 수단</h3>
+                        <ul>
+                            <li><div class="hide">VISA</div></li>
+                            <li><div class="hide">MASTER</div></li>
+                            <li><div class="hide">JCB</div></li>
+                            <li><div class="hide">KAKAO PAYS</div></li>
+                            <li><div class="hide">AMERICAN EXPRESS</div></li>
+                            <li><div class="hide">APPLE PAY</div></li>
+                            <li><div class="hide">PAYCO</div></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="wrap">
+                <div class="footer-bottom-left clear">
+                    <ul>
+                        <li>© 2014-2024 Klook. All Rights Reserved.</li>
+                        <li>클룩트래블테크놀러지(유)</li>
+                        <li>대표 린자오웨이</li>
+                        <li>서울 서초구 서초대로 77길 17, 12층</li>
+                        <li>사업자등록번호 301-86-34203</li>
+                        <li>고객 문의 02-3478-4131</li>
+                    </ul>
+                </div>
+                <div class="footer-bottom-right clear">
+                    <ul>
+                        <li>사업자정보확인</li>
+                        <li>통신판매업신고번호 제2021-서울서초-0989호</li>
+                        <li>관광사업자등록번호 제2021-000006호</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script/script.js"></script>
+</body>
+</html>

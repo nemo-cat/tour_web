@@ -1,0 +1,1080 @@
+/* style */
+.wrap {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+section {
+    padding: 0 0 90px;
+}
+
+
+.section-tit {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.section-tit h2 {
+    line-height: 2.375rem;
+    color: #212121;
+    font-weight: 600;
+    font-size: 1.75rem;
+}
+
+.section-tit p {
+    line-height: 1.5rem;
+    color: #999;
+    font-size: 0.75rem;
+}
+
+
+/* 섹션 제목 */
+.section-tit {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.section-tit h2 {
+    line-height: 2.375rem;
+    color: #212121;
+    font-weight: 600;
+    font-size: 1.75rem;
+}
+
+.section-tit p {
+    line-height: 1.5rem;
+    color: #999;
+    font-size: 0.75rem;
+}
+
+/* 카드 */
+.card-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-3box .card-item {
+    width: 32.265%;
+}
+
+.card-item {
+    width: 23.828%;
+    border-radius: 20px;
+    border: 1px solid #ebebeb;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.card-item:hover img {
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+.card-item-top {
+    overflow: hidden;
+}
+
+.card-item-top img {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.card-item-bottom {
+    padding: 20px;
+}
+
+.card-item-bottom .card-title {
+    padding: 0 0 8px;
+    font-weight: 500;
+    font-size: 1.063rem;
+    color: #FF5B00;
+}
+
+.card-item-bottom .card-sub {
+    font-size: 0.875rem;
+    color: #999;
+}
+
+
+/* 텍스트 내용 넘어가면 말줄임 */
+.card-title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.card-sub {
+
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical; 
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2; 
+}
+
+
+/*=================*/
+/* 헤더영역 */
+.header-bottom-left .gnb-menu.tablet,
+.header-bottom-left .header-util.tablet,
+.header-bottom .header-search.moblie  {
+    display: none;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+}
+
+.header-top-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-top-left h1 {
+    padding: 0 10px 0 0;
+}
+
+.header-top-left h1 a {
+    display: block;
+    width: 86px;
+    height: 50px;
+    background: url(../images/logo-color.png) no-repeat center left;
+}
+
+.header-top-left .header-search {
+    position: relative;
+}
+
+.header-top-left .header-search input {
+    width: 450px;
+    padding: 0 0 0 20px;
+    line-height: 50px;
+    border-radius: 50px;
+    background-color: #f5f5f5;
+}
+
+.header-top-left .header-search input::placeholder {
+    font-family: "Pretendard-Regular";
+    font-size: 0.75rem;
+    color: #808080;
+}
+
+.header-top-left .header-search input:focus {
+    outline: none;
+}
+
+.header-top-left .header-search button {
+    width: 50px;
+    position: absolute;
+    right: 10px;
+    background: url(../images/ico-search.png) no-repeat center;
+}
+
+.header-top-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-top-right .header-util {
+    display: flex;
+    font-size: 0.75rem;
+}
+
+.header-top-right .header-util li,
+.header-top-right .header-util li a {
+    display: block;
+    padding: 0 5px;
+    line-height: 30px;
+}
+
+.header-top-right .header-util li:last-child a {
+    width: 72px;
+    text-align: center;
+    border-radius: 30px;
+    background-color: #FF5B00;
+    color: #fff; 
+}
+
+.header-top-right .header-util li:hover a {
+    text-decoration: underline;
+}
+
+
+.toggle-menu {
+    display: none;
+}
+
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.header-bottom-left {
+    display: flex;
+    align-items: center ;
+}
+
+
+.header-bottom-left .gnb-menu {
+    display: flex;
+}
+
+.header-bottom-left .gnb-menu li a {
+    display: block;
+    padding: 0 10px;
+    line-height: 40px;
+}
+
+.header-bottom-left .gnb-menu li a:hover {
+    color: #FF5B00;
+}
+
+.header-bottom-left .gnb-menu li:first-child a {
+    padding: 0 10px 0 20px;
+    background: url(../images/ico-place.png) no-repeat center left;
+    color: #FF5B00;
+} 
+
+.header-bottom-right .event {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.header-bottom-right .event li a {
+    display: block;
+    padding: 0 10px 0 30px;
+    line-height: 40px;
+}
+
+.header-bottom-right .event li a:hover {
+    text-decoration: underline;
+}
+
+.header-bottom-right .event li:first-child a {
+    background: url(../images/ico-event.png) no-repeat center left;
+}
+
+.header-bottom-right .event li:last-child a {
+    background: url(../images/ico-flag.png) no-repeat center left;
+}
+
+/* 슬라이드 */
+#mainSlider {
+    height: 450px;
+}
+
+.slider-wrap {
+    width: 100%;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-inner {
+    display: flex;
+    width: calc(100% * 3);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+   
+}
+
+.slider-inner li {
+    width: calc(100% / 3);
+    height: 450px;
+    position: relative;
+}
+
+.slider-inner li a {
+    display: block;
+    width: 100%;
+    height: 450px;
+}
+
+.slider-inner li a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-inner li a .slider-text {
+    width: 100%;
+    max-width: 1320px;
+    padding: 0 20px;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+}
+
+.slider-text .slider-text-inner {
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.slider-inner li:last-child .slider-text-inner {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.slider-text .country {
+    padding: 10px 20px;
+    line-height: 30px;
+    border-radius: 30px;
+    font-size: 12px;
+    background-color: #FF5B00;
+}
+
+.slider-text p {
+    padding: 10px 0;
+    line-height: 38px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+
+.slider-btn {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 1320px;
+    padding: 0 20px;
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider-btn li {
+    width: 52px;
+    height: 52px;
+    margin-right: 10px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slider-btn li span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slider-btn li:hover span {
+    background-color: rgba(0, 0, 0, 0.2); 
+}
+
+.slider-btn li.active {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ebebeb;
+}
+
+.slider-btn li.active span {
+    display: none;
+}
+
+
+/* 검색 */
+#search {
+    padding: 70px 0 90px;
+}
+#search .wrap {
+    display: flex;
+    position: relative;
+}
+
+#search .wrap div {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 80px;
+    padding: 0 0 0 40px;
+    border: 1px solid #ebebeb;
+}
+
+#search .wrap .arrive {
+    width: 65%;
+    border-radius: 80px 0 0 80px;
+    border-right: none;
+}
+
+#search .date {
+    width: 35%;
+    padding: 0 0 0 20px;
+    border-radius: 0 80px 80px 0;
+}
+
+#search .wrap span {
+    font-size: 0.75rem;
+    color: #FF5B00;
+}
+
+#search .wrap input {
+    width: 80%;
+    height: 45px;
+    background-color: inherit;
+}
+
+#search .wrap input:focus {
+    outline: none;
+}
+
+#search .wrap input::placeholder {
+    font-family: "Pretendard-Regular";
+    color: #808080;
+}
+
+#search button {
+    width: 100px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    border-radius: 80px;
+    color: #fff;
+    background-color: #FF5B00;
+}
+
+
+/* 클룩여행플랜 */
+.tab-menu {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.tab-menu li {
+    margin: 0 5px;
+    padding: 0 20px;
+    line-height: 1.875rem;
+    border: 1px solid #ebebeb;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    cursor: pointer; 
+}
+
+.tab-menu li:hover {
+    text-decoration: underline;
+}
+
+.tab-menu li.active {
+    color: #FF5B00;
+    border: 1px solid #FF5B00;
+}
+
+#plan .card-box {
+    display: none;
+}
+
+#plan .card-box.active {
+    display: flex;
+}
+
+/* 프로모션 */
+#promotion .content-area {
+    display: block;
+}
+
+#promotion .content-area.tablet,
+#promotion .content-area.mobile {
+    display: none;
+}
+
+#promotion .wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+#promotion .content-inner {
+    display: flex;
+    flex-flow: nowrap;
+    width: calc(100% * 4 + ( 20px * 3));
+    position: relative;
+}
+ 
+#promotion .card-box {
+    width: 100%;
+    margin-right: 20px
+}
+
+#promotion .card-box:last-child {
+    margin: 0;
+}
+
+#promotion .card-item img {
+    width: 100%;
+}
+ 
+#promotion .card-item:hover img {
+    transform: none;    
+}
+
+.promotion-btn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.promotion-btn div {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 1px solid #ebebeb;
+    cursor: pointer;
+}
+
+.promotion-btn div:first-child {
+    background: url(../images/btn-left.png) no-repeat center rgba(255, 255, 255, 0.9);
+}
+
+.promotion-btn div:last-child {
+    background: url(../images/btn-right.png) no-repeat center rgba(255, 255, 255, 0.9);
+}
+
+/* 나만의 테마 여행 */
+#ownTrip .card-box {
+    display: none;
+}
+
+#ownTrip .card-box.active {
+    display: flex;
+}
+
+#ownTrip .card-box {
+    padding-bottom: 20px;
+}
+
+#ownTrip .bottom-btn {
+    text-align: center;
+}
+
+#ownTrip .view-more,
+#ownTrip .close-more {
+    padding: 0 40px;
+    line-height: 3.125rem; 
+    border: 1px solid #ebebeb;
+    border-radius: 3.125rem;
+    background: none;
+    font-size: 0.75rem;
+    color: #999;
+}
+
+#ownTrip .view-more:hover,
+#ownTrip .close-more:hover {
+    border: 1px solid #FF5B00;
+    color: #FF5B00;
+}
+
+
+#more .card-item {
+    position: relative;
+}
+
+#more .img-dimmed {
+    position: absolute;
+    width: 100%;
+    bottom: -50%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+#more .card-item:hover .img-dimmed {
+    bottom: 0;
+    transition: all 0.2s;
+}
+
+#more .img-dimmed .dimmed-text{
+    padding: 20px;
+    line-height: 1.875rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* 여행지 둘러보기 */
+#aboutKlook .card-item {
+    background-color: #fff;
+}
+
+#aboutKlook .card-item:hover {
+    position: relative;
+    top: -5px;
+    transition: all 0.3s;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+#aboutKlook .card-title {
+   color: #333;
+}
+
+/* footer */
+footer h3 {
+    line-height: 50px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+footer .footer-top {
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.footer-top .wrap {
+    display: flex;
+    padding: 0 20px 50px 20px;
+}
+
+.footer-top-left {
+    display: flex;
+    flex-grow: 3;
+}
+
+.footer-top-left .footer-item-box li a {
+    display: block;
+    padding: 5px 0;
+    font-size: 12px;
+}
+
+.footer-top-left .footer-item-box {
+    padding-right: 100px;
+}
+
+.footer-top-left .footer-item-box:last-child {
+    padding: 0;
+}
+
+.footer-top-left .footer-item-box li a:hover {
+    text-decoration: underline;
+}
+
+.footer-top-right ul {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.footer-top-right li {
+    width: 36px;
+    height: 22px;
+    margin: 0 10px 10px 0;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+}
+
+.footer-top-right li:nth-child(1) {
+    background: url(../images/footer-pay-01.png) no-repeat center;
+}
+.footer-top-right li:nth-child(2) {
+    background: url(../images/footer-pay-02.png) no-repeat center;
+}
+.footer-top-right li:nth-child(3) {
+    background: url(../images/footer-pay-03.png) no-repeat center;
+}
+.footer-top-right li:nth-child(4) {
+    background: url(../images/footer-pay-04.png) no-repeat center;
+}
+
+.footer-top-right li:nth-child(5) {
+    background: url(../images/footer-pay-05.png) no-repeat center;
+}
+
+.footer-top-right li:nth-child(6) {
+    background: url(../images/footer-pay-06.png) no-repeat center;
+}
+
+.footer-top-right li:nth-child(7) {
+    background: url(../images/footer-pay-07.png) no-repeat center;
+}
+
+.footer-bottom .wrap {
+    display: flex;
+    flex-flow: column;
+}
+
+.footer-bottom ul li {
+    float: left;
+    padding: 5px 10px 5px 0;
+    font-size: 14px;
+}
+
+@media all and (max-width: 1193px){
+    .card-box {
+        flex-flow: wrap;
+        justify-content: space-around;
+    }
+
+    .card-2box .card-item {
+        width: 46.093%;
+    }
+
+    .card-item {
+        width: 46.093%;
+    }
+
+    .card-item:nth-child(1),
+    .card-item:nth-child(2) {
+        margin-bottom: 20px;
+    }
+
+    /* header */
+    .header-top-right .header-util,
+    .header-bottom .header-search.moblie,
+    .header-bottom-left .gnb-menu,
+    .header-bottom-right .event
+        {
+        display: none;
+    }
+
+    header {
+        position: relative;
+    }  
+
+    header .header-top {
+        height: 75px;
+    }
+
+    .toggle-menu {
+        display: block;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .toggle-menu span {
+        display: block;
+        width: 20px;
+        height: 3px;
+        margin-bottom: 5px;
+        background-color: #FF5B00;
+        border-radius: 3px;
+    }
+
+    .toggle-menu span:last-child {
+        margin: 0;
+    }
+
+    .header-bottom {
+        display: none;
+        flex-flow: column wrap;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 75px;
+        right: 0;
+        background-color: #fff;
+        border-top: 1px solid #ebebeb;
+    }
+
+    .header-bottom-left {
+        flex-flow: column nowrap;
+    }
+
+    .header-bottom-left .gnb-menu.tablet {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        flex-flow: row wrap;
+    }
+
+    .header-bottom-left .gnb-menu.tablet li {
+        display: flex;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        overflow: hidden;
+    }
+
+    .header-bottom-left .gnb-menu.tablet li:hover {
+        background-color: #f2f2f2;
+        border-radius: 20px;
+    }
+
+
+    .header-bottom-left .gnb-menu.tablet li a {
+        width: 100%;
+        padding: 50px 0;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    .header-bottom-left .gnb-menu.tablet li:first-child a {
+        background: none;
+    } 
+
+    .header-bottom-left .header-util.tablet {
+        display: flex;
+        justify-content: end;
+        width: 100%;
+        padding: 50px 10px 20px 10px;
+    }
+
+    .header-bottom-left .header-util.tablet li a {
+        display: block;
+        padding: 10px;
+        font-size: 12px;
+        color: #999;
+    }
+
+    .header-bottom-left .header-util.tablet li a:hover {
+        text-decoration: underline;
+    }
+
+    .header-bottom-left .header-util.tablet  li:last-child a {
+        width: 72px;
+        text-align: center;
+        border-radius: 30px;
+        background-color: #FF5B00;
+        color: #fff; 
+    }
+
+    /* 프로모션 */
+    #promotion .content-area,
+    #promotion .content-area.mobile {
+        display: none;
+    }
+
+    #promotion .content-area.tablet {
+        display: block;
+    }
+        
+        #promotion .content-inner {
+        width: calc(100% * 3 + (20px * 2));
+        }
+
+
+
+        #promotion .card-item:nth-child(1),
+        #promotion .card-item:nth-child(2) {
+            margin-bottom: 0;
+        }
+
+    /* 여행지 둘러보기 */
+    #more .card-item a{
+        display: block;
+        height: 100%;
+        overflow: hidden;
+        /* display: flex; */
+        background-color: #341111;
+    }
+
+    #more .card-item a img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* footer */
+    .footer-top .wrap {
+        flex-flow:column;
+    }
+
+}
+
+@media all and (max-width: 767px) {
+    body {
+        min-width: 320px;
+    }
+
+    .wrap {
+        padding: 0 10px;
+    }
+
+    section {
+        padding: 0 0 50px;
+    }
+    
+
+    .card-box {
+        justify-content: center;
+        position: relative;
+    }
+
+    .card-item {
+        display: none;
+        width: 100%;
+    }
+
+    .card-item:nth-child(1),
+    .card-item:nth-child(2) {
+        margin-bottom: 0;
+    }
+
+    .card-item:nth-child(1){
+        display: block;
+    }
+    
+    /* header */
+    .header-top {
+        height: 50px;
+    }
+
+    .header-search {
+        display: none;
+    }
+
+    .header-bottom {
+        top: 50px;
+    }
+
+    .header-bottom .header-search.moblie {
+        display: block;
+        width: 100%;
+        padding: 30px 10px 20px 10px;
+    }
+
+    .header-bottom .header-search.moblie input {
+        width: 100%;
+        padding: 0 0 0 20px;
+        line-height: 50px;
+        border-radius: 50px;
+        background-color: #f5f5f5;
+    }
+    
+    .header-bottom .header-search.moblie input::placeholder {
+        font-family: "Pretendard-Regular";
+        font-size: 0.75rem;
+        color: #808080;
+    }
+    
+    .header-bottom .header-search.moblie input:focus {
+        outline: none;
+    }
+    
+    .header-bottom .header-search.moblie button {
+        width: 50px;
+        position: absolute;
+        right: 10px;
+        background: url(../images/ico-search.png) no-repeat center;
+    }
+
+    /* 클룩여행플랜 */
+    #plan .card-item {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    #plan .card-item:last-child {
+        margin-bottom: 0;
+    }
+
+    /* 검색 */
+    #search .wrap {
+        flex-flow: row wrap;
+    }
+    
+    #search button {
+        width: 100%;
+        margin-top: 10px;
+        position: static;
+        transform: none;
+    }
+
+    /* 프로모션 */
+    #promotion .wrap .card-item {
+        display: block;
+    }
+
+    #promotion .content-area {
+        width: 100%;
+    }
+
+    #promotion .content-inner {
+        width: calc(100% * 6 + (20px * 5));
+    }
+
+    #promotion .card-box {
+        display: flex;
+        flex-flow: row nowrap;
+        min-height: auto;
+    }
+
+    #promotion .card-box .card-item {
+        width: 100%;
+        min-width: 300px;
+        margin-right: 10px;
+    }
+
+    #promotion .card-box .card-item:last-child {
+        margin-right: 0;
+    }
+
+    #promotion .promotion-btn {
+        display: none;
+    }
+
+    /* 나만의 테마여행 */
+    #ownTrip .card-item {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    #ownTrip .card-item:last-child {
+        margin-bottom: 0;
+    }
+
+    /* 클룩으로 한번에 */
+    #aboutKlook .card-item {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    #aboutKlook .card-item:last-child {
+        margin: 0;
+    }
+
+    /* footer */
+    .footer-top-left {
+        flex-flow: column wrap;
+    }
+}
+
+@media all and (max-width : 476px) {
+    .header-bottom-left .gnb-menu.tablet {
+        justify-content: center;
+    }
+    
+    .header-bottom-left .gnb-menu.tablet li {
+        width: 80px;
+        height: 80px;
+    }
+
+    .header-bottom-left .header-util.tablet {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        padding: 50px 10px 20px 10px;
+    }
+
+    .header-bottom-left .header-util.tablet li {
+        width: 50%;
+        text-align: center;
+    }
+
+    .header-bottom-left .header-util.tablet li:last-child {
+        display: flex;
+        width: 100%;
+        padding: 10px 0;
+        justify-content: center;
+    }
+
+    .header-bottom-left .header-util.tablet li:last-child a {
+        width: 100%;
+    }
+    
+}
