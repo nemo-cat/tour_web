@@ -31,7 +31,6 @@ $(document).ready(function () {
     function mainSlide()
     {
         slideIndex++; // 슬라이드 인덱스 1증가
-        console.log("함수안의 슬라이드의 인덱스 : " + slideIndex);
         mainSlideBtn(slideIndex);
         slidePosition -= nowWidth; // 현재 브라우저의 크기만큼 이동시킴
         $('.slider-inner').stop().animate({ left: slidePosition + 'px' }, 300);
@@ -162,7 +161,6 @@ $(document).ready(function () {
             //모바일버전
             promotionCount = $('#promotion .content-area.mobile .card-item').length;
             promotionWidth = parseInt($('#promotion .content-area').css('width'));
-            console.log(promotionWidth)
         } 
 
         // 방향에 따라 현재 인덱스 설정

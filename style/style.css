@@ -1,4 +1,8 @@
-/* style */
+/* ========== style ========== */
+body {
+    position: relative;
+}
+
 .wrap {
     max-width: 1320px;
     margin: 0 auto;
@@ -9,7 +13,6 @@
 section {
     padding: 0 0 90px;
 }
-
 
 .section-tit {
     padding: 20px 0;
@@ -99,7 +102,7 @@ section {
 }
 
 
-/* 텍스트 내용 넘어가면 말줄임 */
+/* 텍스트 말줄임 */
 .card-title {
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -107,7 +110,6 @@ section {
 }
 
 .card-sub {
-
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical; 
@@ -116,16 +118,13 @@ section {
 }
 
 
-/*=================*/
-/* 헤더영역 */
+
+/* ==========  헤더영역 ==========  */
+/* 태블릿, 모바일 요소 숨기기 */
 .header-bottom-left .gnb-menu.tablet,
 .header-bottom-left .header-util.tablet,
 .header-bottom .header-search.moblie  {
     display: none;
-}
-
-body {
-    position: relative;
 }
 
 .gnb-bg {
@@ -139,6 +138,11 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.toggle-menu {
+    display: none;
+}
+
+/* pc hedaer */
 .header-top {
     display: flex;
     justify-content: space-between;
@@ -219,11 +223,6 @@ body {
     text-decoration: underline;
 }
 
-
-.toggle-menu {
-    display: none;
-}
-
 .header-bottom {
     display: flex;
     justify-content: space-between;
@@ -280,7 +279,9 @@ body {
     background: url(../images/ico-flag.png) no-repeat center left;
 }
 
-/* 슬라이드 */
+
+
+/* ========== 슬라이드 ==========  */
 #mainSlider {
     height: 450px;
 }
@@ -299,7 +300,6 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-   
 }
 
 .slider-inner li {
@@ -381,9 +381,9 @@ body {
 
 .slider-btn li span {
     display: block;
-    position: absolute;
     width: 100%;
     height: 100%;
+    position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -402,10 +402,12 @@ body {
 }
 
 
-/* 검색 */
+
+/* ========== 검색 ==========  */
 #search {
     padding: 70px 0 90px;
 }
+
 #search .wrap {
     display: flex;
     position: relative;
@@ -465,7 +467,8 @@ body {
 }
 
 
-/* 클룩여행플랜 */
+
+/* ==========  클룩여행플랜 ==========  */
 .tab-menu {
     display: flex;
     justify-content: center;
@@ -499,7 +502,9 @@ body {
     display: flex;
 }
 
-/* 프로모션 */
+
+
+/* ========== 프로모션 ========== */
 #promotion .content-area {
     display: block;
 }
@@ -564,7 +569,9 @@ body {
     background: url(../images/btn-right.png) no-repeat center rgba(255, 255, 255, 0.9);
 }
 
-/* 나만의 테마 여행 */
+
+
+/* ========== 나만의 테마 여행 ========== */
 #ownTrip .card-box {
     display: none;
 }
@@ -598,7 +605,6 @@ body {
     color: #FF5B00;
 }
 
-
 #more .card-item {
     position: relative;
 }
@@ -609,7 +615,6 @@ body {
     bottom: -50%;
     background: rgba(0, 0, 0, 0.5);
 }
-
 
 #more .card-item:hover .img-dimmed {
     bottom: 0;
@@ -624,7 +629,7 @@ body {
     color: #fff;
 }
 
-/* 여행지 둘러보기 */
+/* ==========  여행지 둘러보기 ==========  */
 #aboutKlook .card-item {
     background-color: #fff;
 }
@@ -640,7 +645,9 @@ body {
    color: #333;
 }
 
-/* footer */
+
+
+/* ==========  푸터footer ==========  */
 footer h3 {
     line-height: 50px;
     font-size: 14px;
@@ -696,12 +703,15 @@ footer .footer-top {
 .footer-top-right li:nth-child(1) {
     background: url(../images/footer-pay-01.png) no-repeat center;
 }
+
 .footer-top-right li:nth-child(2) {
     background: url(../images/footer-pay-02.png) no-repeat center;
 }
+
 .footer-top-right li:nth-child(3) {
     background: url(../images/footer-pay-03.png) no-repeat center;
 }
+
 .footer-top-right li:nth-child(4) {
     background: url(../images/footer-pay-04.png) no-repeat center;
 }
@@ -729,7 +739,24 @@ footer .footer-top {
     font-size: 14px;
 }
 
+
+
+/* ========== 미디어쿼리 ========== */
 @media all and (max-width: 1193px){
+    /* ========== style ========== */
+     /* header */
+     .header-top-right .header-util,
+     .header-bottom .header-search.moblie,
+     .header-bottom-left .gnb-menu,
+     .header-bottom-right .event
+     {
+         display: none;
+     }
+ 
+     .gnb-bg {
+         top: 75px;
+     }
+ 
     .card-box {
         flex-flow: wrap;
         justify-content: space-around;
@@ -748,20 +775,9 @@ footer .footer-top {
         margin-bottom: 20px;
     }
 
-    /* header */
-    .header-top-right .header-util,
-    .header-bottom .header-search.moblie,
-    .header-bottom-left .gnb-menu,
-    .header-bottom-right .event
-    {
-        display: none;
-    }
 
-    .gnb-bg {
-        top: 75px;
-    }
-
-
+   
+    /* ========== 헤더 header ========== */
     header {
         position: relative;
     }  
@@ -866,7 +882,9 @@ footer .footer-top {
         color: #fff; 
     }
 
-    /* 프로모션 */
+
+
+    /* ========== 프로모션 ========== */
     #promotion .content-area,
     #promotion .content-area.mobile {
         display: none;
@@ -876,23 +894,22 @@ footer .footer-top {
         display: block;
     }
         
-        #promotion .content-inner {
+    #promotion .content-inner {
         width: calc(100% * 3 + (20px * 2));
-        }
+    }
+
+    #promotion .card-item:nth-child(1),
+    #promotion .card-item:nth-child(2) {
+        margin-bottom: 0;
+    }
 
 
 
-        #promotion .card-item:nth-child(1),
-        #promotion .card-item:nth-child(2) {
-            margin-bottom: 0;
-        }
-
-    /* 여행지 둘러보기 */
+    /* ========== 여행지 둘러보기 ========== */
     #more .card-item a{
         display: block;
         height: 100%;
         overflow: hidden;
-        /* display: flex; */
         background-color: #341111;
     }
 
@@ -909,6 +926,7 @@ footer .footer-top {
 }
 
 @media all and (max-width: 767px) {
+    /* ========== stlye ========== */
     body {
         min-width: 320px;
     }
@@ -920,7 +938,6 @@ footer .footer-top {
     section {
         padding: 0 0 50px;
     }
-    
 
     .card-box {
         justify-content: center;
@@ -940,12 +957,12 @@ footer .footer-top {
     .card-item:nth-child(1){
         display: block;
     }
-    
-    /* header */ 
+
     .gnb-bg {
         top: 50px;
     }
-
+    
+    /* ========== header ========== */ 
     header .header-top {
         height: 50px;
     } 
@@ -989,7 +1006,9 @@ footer .footer-top {
         background: url(../images/ico-search.png) no-repeat center;
     }
 
-    /* 클룩여행플랜 */
+
+
+    /* ========== 클룩여행플랜 ========== */
     #plan .card-item {
         display: block;
         margin-bottom: 20px;
@@ -999,7 +1018,9 @@ footer .footer-top {
         margin-bottom: 0;
     }
 
-    /* 검색 */
+
+
+    /* ========== 검색 ========== */
     #search .wrap {
         flex-flow: row wrap;
     }
@@ -1011,7 +1032,9 @@ footer .footer-top {
         transform: none;
     }
 
-    /* 프로모션 */
+
+
+    /* ========== 프로모션 ========== */
     #promotion .wrap .card-item {
         display: block;
     }
@@ -1044,7 +1067,9 @@ footer .footer-top {
         display: none;
     }
 
-    /* 나만의 테마여행 */
+
+
+    /* ========== 나만의 테마여행 ========== */
     #ownTrip .card-item {
         display: block;
         margin-bottom: 20px;
@@ -1054,7 +1079,9 @@ footer .footer-top {
         margin-bottom: 0;
     }
 
-    /* 클룩으로 한번에 */
+
+
+    /* ========== 클룩으로 한번에 ========== */
     #aboutKlook .card-item {
         display: block;
         margin-bottom: 20px;
@@ -1064,13 +1091,16 @@ footer .footer-top {
         margin: 0;
     }
 
-    /* footer */
+    /* ========== 푸터 footer ========== */
     .footer-top-left {
         flex-flow: column wrap;
     }
 }
 
+
+
 @media all and (max-width : 476px) {
+    /* ========== stlye ========== */
     .gnb-bg {
         top: 50px;
     }
@@ -1079,16 +1109,8 @@ footer .footer-top {
         height: 50px;
     } 
 
-/*     .header-bottom-left .gnb-menu.tablet {
-        justify-content: center;
-    }
-    
-    .header-bottom-left .gnb-menu.tablet li {
-        width: 80px;
-        height: 80px;
-    }
- */
 
+    /* ========== 헤더 header ========== */
     .header-bottom-left .gnb-menu.tablet {
         justify-content: flex-start;
     }
@@ -1097,6 +1119,7 @@ footer .footer-top {
         width: 45%;
         margin: 2.5%;
     }
+    
     .header-bottom-left .header-util.tablet {
         display: flex;
         flex-flow: row wrap;
