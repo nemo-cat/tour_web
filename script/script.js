@@ -1,7 +1,26 @@
 $(document).ready(function () {
-    let touchStartX = 0;// 터치 시작 좌표를 저장하는 변수
-    let touchEndX = 0;// 터치 끝 좌표를 저장하는 변수
-    let touchDiff = 0;// 터치 이동 거리를 저장하는 변수
+     /* ========== 헤더 ========== */
+    // 헤더 토글 메뉴 클릭 이벤트 처리
+    $('.toggle-menu').click(function()
+    {
+        // 태블릿, 모바일에서만 작동
+        if ($(window).width() <= 1280)
+        {
+            $('.header-bottom').toggle();
+            $('.gnb-bg').toggle();
+        }
+    });
+
+    // pc버전이면 숨기기
+    if ($(window).width() > 1280)
+    {
+        $('.header-bottom-left .gnb-menu.tablet').css('display', 'none');
+        $('.header-bottom-left .header-util.tablet').css('display', 'none');
+        $('.header-bottom .header-search.mobile').css('display', 'none');
+    }
+
+
+
     /* ========== 슬라이드 ========== */
     let nowWidth = $(window).width();
     let slideCount = $('.slider-inner li').length;
@@ -12,6 +31,7 @@ $(document).ready(function () {
     function mainSlide()
     {
         slideIndex++; // 슬라이드 인덱스 1증가
+        console.log("함수안의 슬라이드의 인덱스 : " + slideIndex);
         mainSlideBtn(slideIndex);
         slidePosition -= nowWidth; // 현재 브라우저의 크기만큼 이동시킴
         $('.slider-inner').stop().animate({ left: slidePosition + 'px' }, 300);
@@ -47,35 +67,53 @@ $(document).ready(function () {
         $('.slider-inner').stop().animate({ left: slidePosition + 'px' }, 300);
     });
 
+
+    let touchStartX = 0;// 터치 시작 좌표를 저장하는 변수
+    let touchEndX = 0;// 터치 끝 좌표를 저장하는 변수
+    let touchDiff = 0;// 터치 이동 거리를 저장하는 변수
+
      // 터치 시작 이벤트 처리
-    $('#promotion .content-inner').on('touchstart', function(event)
+    $('.slider-inner li').on('touchstart', function(event)
     {
         touchStartX = event.touches[0].clientX;
     });
 
     // 터치 이동 이벤트 처리
-    $('#promotion .content-inner').on('touchmove', function(event)
+    $('.slider-inner li').on('touchmove', function(event)
     {
         touchEndX = event.touches[0].clientX;
         touchDiff = touchStartX - touchEndX;
     });
 
     // 터치 끝 이벤트 처리
-    $('#promotion .content-inner').on('touchend', function(event)
+    $('.slider-inner li').on('touchend', function(event)
     {
         if (touchDiff > 50)
         {
             // 오른쪽으로 터치하면 다음 슬라이드를 보여줌
-            promotionSlide('right');
-            resetInterval();
+            slideIndex++;
+            if (slideIndex >= slideCount)
+            {
+                slideIndex = 0;
+            }
         }
         else if (touchDiff < -50)
         {
             // 왼쪽으로 터치하면 이전 슬라이드를 보여줌
-            promotionSlide('left');
-            resetInterval();
+            slideIndex--;
+            if (slideIndex < 0)
+            {
+                slideIndex = slideCount - 1;
+            }
         }
-
+    
+        // 터치로 인한 슬라이드 변경 후 처리
+        clearInterval(slideInterval);
+        slideInterval = setInterval(mainSlide, 3000);
+        slidePosition = -slideIndex * nowWidth;
+        mainSlideBtn(slideIndex);
+        $('.slider-inner').stop().animate({ left: slidePosition + 'px' }, 300);
+    
         // 초기화
         touchStartX = 0;
         touchEndX = 0;
@@ -293,6 +331,7 @@ $(window).resize(function()
         resetInterval();
     }
     lastWidth = window.innerWidth;
+
 });
 
 });
