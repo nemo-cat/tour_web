@@ -178,6 +178,7 @@ legend,
     text-align: center;
     z-index: 100;
 }
+
 .skip:focus {
     top: 0;
 }
