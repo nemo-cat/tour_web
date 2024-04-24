@@ -1,4 +1,45 @@
 $(document).ready(function () {
+    
+    /* ========================== NOTICE ========================== */
+    let getNoticeCheck = sessionStorage.getItem('noticeCheck');
+    let noticeCheck = false; // 기본값을 false로 설정
+
+    // 세션스토리지에 값이 없거나(Null), false가 저장되어있으면 다음 실행
+    if (!getNoticeCheck || getNoticeCheck == 'false') {
+        noticeCheck = false; //세션스토리지에서 noticeCheck값을 false로 저장
+        sessionStorage.setItem('noticeCheck', noticeCheck);
+    } else {
+        //그 외의 경우 공지사항체크를 한 것으로 간주하여 noticeCheck의 값을 true로 변경
+        noticeCheck = true;
+        sessionStorage.setItem('noticeCheck', noticeCheck);
+    }
+
+    // 스크롤 방지 & 맨위로 이동
+    function preventScroll(event) {
+        window.scrollTo(0, 0); // 맨 위로 스크롤 이동시킴
+        event.preventDefault(); // 스크롤방지
+    }
+
+    //공지사항 확인을 안했을경우
+    if (!noticeCheck) {
+        //스크롤 방지 & 공지사항 보임
+        document.addEventListener('scroll', preventScroll);
+        $('#notice').css('display', 'block');
+    }
+
+    //닫기 버튼 클릭시 공지사항 사라지고, 다른 함수들 작동 시작
+    $('.notice-close').click(function() {
+        //닫기버튼 누르면 공지사항 사라지고, 다시 스크롤이 됨
+        $('#notice').css('display', 'none');
+        document.removeEventListener('scroll', preventScroll);
+
+        //공지사항을 체크한 것으로 간주하고 noticeCheck값을 true로 변경해줌
+        noticeCheck = true;
+        //세션스토리지 값도 true로 변경하여 다음에 공지사항이 안나오도록 함.
+        sessionStorage.setItem('noticeCheck', noticeCheck);
+    })
+    /* =========================================================== */
+
      /* ========== 헤더 ========== */
     // 헤더 토글 메뉴 클릭 이벤트 처리
     $('.toggle-menu').click(function()
