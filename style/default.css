@@ -105,46 +105,13 @@ button {
     cursor: pointer;
 }
 
-/* Normalize */
+
+/* Style */
 body {
     font-family: "Pretendard-Regular";
     color: #333;
 }
-select {
-    appearance: none;
-    margin: 0 40px 0 0;
-    background: url(../images/bu_select.png) no-repeat right 20px center;
-}
-select::-ms-expand {
-    display: none;
-}
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-}
-
-.ie9 .test {
-    position: relative;
-    z-index: 0;
-    display: inline-block;
-}
-.ie9 .test select {
-    margin: 0 20px 0 0;
-    z-index: 1;
-}
-.ie9 .test:before {
-    content: "";
-    position: absolute;
-    right: 1px;
-    top: 1px;
-    z-index: 3;
-    width: 20px;
-    height: calc(100% - 2px);
-    background: #fff;
-}
-
-/* Style */
 .clear {
     clear: both;
 }
@@ -153,6 +120,7 @@ input[type="number"]::-webkit-outer-spin-button {
     display: block;
     clear: both;
 }
+
 caption,
 caption > div,
 legend,
